@@ -1,5 +1,6 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew update -y
 brew install vim
 brew install tmux
 brew install zsh
