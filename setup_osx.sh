@@ -11,3 +11,6 @@ brew install macvim
 defaults write org.vim.MacVim MMNativeFullScreen 0 
 
 brew install ssh-copy-id
+
+mkdir -p ~/.config
+cp ./flake8 ~/.config
