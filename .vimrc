@@ -5,7 +5,6 @@ filetype on            " enables filetype detection
 filetype plugin on     " enables filetype specific plugins
 
 set backspace=indent,eol,start
-set term=builtin_beos-ansi
 
 filetype plugin indent on
 syntax on
@@ -13,6 +12,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 set number
+set term=screen-256color
 
 " Turn off arrow keys
 " ------
@@ -55,3 +55,14 @@ au Syntax * RainbowParenthesesLoadBraces
 " " ------
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" EMMET JAZZ
+" " ------
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,j2 EmmetInstall
+let g:user_emmet_leader_key='<C-C>'
+
+" COFFEESCRIPT DRIPS
+" " ------
+autocmd BufWritePost *.coffee silent make!
+
