@@ -4,6 +4,7 @@ Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/editorconfig/editorconfig-vim.git'
 Plug 'https://github.com/nvie/vim-flake8.git'
 Plug 'https://github.com/frankier/neovim-colors-solarized-truecolor-only.git'
+Plug 'https://github.com/mattn/emmet-vim.git'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
@@ -105,4 +106,5 @@ let g:airline_right_sep = ''
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<nm>'
 
