@@ -7,11 +7,8 @@ Plug 'https://github.com/frankier/neovim-colors-solarized-truecolor-only.git'
 Plug 'https://github.com/mattn/emmet-vim.git'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 call plug#end()
 
 set runtimepath+=$XDG_CONFIG_HOME/nvim/plugged/deoplete.nvim
@@ -76,22 +73,6 @@ endif
 let g:deoplete#disable_auto_complete = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-" omnifuncs
-augroup omnifuncs
-  autocmd!
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-augroup end
-" tern
-if exists('g:plugs["tern_for_vim"]')
-  let g:tern_show_argument_hints = 'on_hold'
-  let g:tern_show_signature_in_pum = 1
-  autocmd FileType javascript setlocal omnifunc=tern#Complete
-endif
-
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
@@ -106,5 +87,11 @@ let g:airline_right_sep = ''
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<nm>'
+let g:user_emmet_leader_key='<C-m>'
 
+autocmd Filetype html setlocal ts=2 sw=2 et
+autocmd Filetype ruby setlocal ts=2 sw=2 et
+autocmd Filetype python setlocal ts=4 sw=4 et
+autocmd Filetype javascript setlocal ts=2 sw=2 et
+autocmd Filetype coffeescript setlocal ts=4 sw=4 et
+autocmd Filetype jade setlocal ts=4 sw=4 et
