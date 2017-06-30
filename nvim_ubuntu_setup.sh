@@ -5,6 +5,7 @@ sudo apt-get update
 sudo apt-get install neovim
 sudo apt-get install pip
 sudo apt-get install python3-pip
+sudo apt-get install ack-grep
 
 mkdir -p ~/.config/nvim/autoload
 cd ~/.config/nvim/autoload
