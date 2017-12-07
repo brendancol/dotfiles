@@ -3,10 +3,10 @@ call plug#begin()
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/editorconfig/editorconfig-vim.git'
 Plug 'https://github.com/nvie/vim-flake8.git'
-Plug 'https://github.com/frankier/neovim-colors-solarized-truecolor-only.git'
 Plug 'https://github.com/mattn/emmet-vim.git'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
+Plug 'iCyMind/NeoSolarized'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 call plug#end()
@@ -41,10 +41,7 @@ set cursorline
 syntax enable
 syntax on
 
-set termguicolors
 set background=dark
-colorscheme solarized
-
 set encoding=utf-8
 
 " SEARCH
@@ -78,6 +75,11 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " tern
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+
+" SOLARIZED
+" ------
+let g:neosolarized_contrast = "high"
+colorscheme NeoSolarized
 
 " AIRLINE
 " ------
