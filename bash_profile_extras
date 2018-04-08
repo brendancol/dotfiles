@@ -1,0 +1,13 @@
+
+mcd () {
+    mkdir -p $1;
+    cd $1;
+}
+
+
+start_screen () {
+  screen -dmS $1 && screen -S $1 -X logfile $1.proc.log && screen -S $1 -X log;
+  screen -r $1;
+}
+
+
