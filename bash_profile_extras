@@ -42,4 +42,4 @@ unbak() {
     fi
 }
 
-
+alias hs='history | grep'
