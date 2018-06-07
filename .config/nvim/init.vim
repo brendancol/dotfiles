@@ -78,8 +78,8 @@ autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
 " SOLARIZED
 " ------
-let g:neosolarized_contrast = "high"
-colorscheme NeoSolarized
+"let g:neosolarized_contrast = "high"
+"colorscheme NeoSolarized
 
 " AIRLINE
 " ------
@@ -97,3 +97,12 @@ autocmd Filetype python setlocal ts=4 sw=4 et
 autocmd Filetype javascript setlocal ts=2 sw=2 et
 autocmd Filetype coffeescript setlocal ts=4 sw=4 et
 autocmd Filetype jade setlocal ts=4 sw=4 et
+
+autocmd TermOpen * setlocal nonumber norelativenumber
+
+
+
+
+
+
+
