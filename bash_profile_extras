@@ -43,3 +43,8 @@ unbak() {
 }
 
 alias hs='history | grep'
+
+
+# export PATH="$HOME/.npm-packages/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
