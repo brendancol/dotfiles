@@ -36,7 +36,7 @@ tnoremap jk <C-\><C-n>
 tnoremap kj <C-\><C-n>
 
 filetype plugin indent on
-set number
+set relativenumber
 set ruler
 set cursorline
 
@@ -126,3 +126,4 @@ let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
 let g:go_auto_type_info = 1
 
+au TermOpen * setlocal nonumber norelativenumber
