@@ -127,3 +127,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:go_auto_type_info = 1
 
 au TermOpen * setlocal nonumber norelativenumber
+
+:command Vspt vsp term://zsh
+:command Spt sp term://zsh
