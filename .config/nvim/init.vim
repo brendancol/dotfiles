@@ -13,6 +13,7 @@ Plug 'w0rp/ale'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
+
 set runtimepath+=$XDG_CONFIG_HOME/nvim/plugged/deoplete.nvim
 set completeopt+=noinsert,noselect
 set completeopt-=preview
@@ -36,15 +37,25 @@ tnoremap jk <C-\><C-n>
 tnoremap kj <C-\><C-n>
 
 filetype plugin indent on
-set relativenumber
+set number
 set ruler
 set cursorline
 
 syntax enable
 syntax on
 
+set t_Co=256
+set termguicolors
 set background=dark
 set encoding=utf-8
+
+colorscheme NeoSolarized
+let g:neosolarized_contrast = "normal"
+let g:neosolarized_visibility = "normal"
+let g:neosolarized_vertSplitBgTrans = 1
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 1
 
 " SEARCH
 " ------
@@ -78,10 +89,6 @@ let g:PyFlakeMaxLineLength = 120
 " tern
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
-" SOLARIZED
-" ------
-let g:neosolarized_contrast = "high"
-colorscheme NeoSolarized
 
 " AIRLINE
 " ------
